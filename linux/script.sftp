@@ -1,0 +1,3 @@
+-get camera/timelapse/done/*.jpg
+-rm camera/timelapse/done/*.jpg
+bye

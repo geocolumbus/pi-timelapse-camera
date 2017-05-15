@@ -1,0 +1,42 @@
+from time import sleep
+from picamera import PiCamera
+from time import localtime, strftime
+import ephem
+from datetime import datetime
+from dateutil import tz
+
+def isDay():
+   user = ephem.Observer()
+   user.lat = '40.0931'      # Worthington, OH
+   user.lon = '-83.0180'      # 
+   user.elevation = 274      # See wikipedia.org/Oldenburg
+   user.temp = 20            # current air temperature gathered manually
+   user.pressure = 1019.5    # current air pressure gathered manually
+
+   next_sunrise_datetime = user.next_rising(ephem.Sun()).datetime()
+   next_sunset_datetime = user.next_setting(ephem.Sun()).datetime()
+
+   from_zone = tz.gettz('UTC')
+   to_zone = tz.gettz('America/New_York')
+   local_sunrise = next_sunrise_datetime.replace(tzinfo=from_zone).astimezone(to_zone)
+   local_sunset = next_sunset_datetime.replace(tzinfo=from_zone).astimezone(to_zone)
+
+   it_is_day = local_sunset < local_sunrise
+   it_is_night = local_sunrise < local_sunset
+
+   return it_is_day
+
+def captureImage(camera):
+    filename = "/home/pi/camera/timelapse/" + strftime("%Y-%m-%d_%H-%M-%S", localtime())+".jpg"
+    camera.resolution = (1920, 1080)
+    camera.start_preview()
+    # Camera warm-up time
+    sleep(5)
+    camera.capture(filename)
+
+camera = PiCamera()
+while 1==1:
+    if isDay() == True:
+        captureImage(camera)
+    sleep(1);
+camera.close()

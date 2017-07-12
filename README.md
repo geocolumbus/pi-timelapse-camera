@@ -108,3 +108,5 @@ from datetime import datetime
 from dateutil import tz
 import os
 ```
+
+A sample crontab is supplied to tie the system together. The python script adds a new image to the timelapse folder every 6 seconds. Every so often, those images are moved to the timelapse/done folder. At 9:40pm, a makemovie.sh script converts the images in the timelapse/done folder into a H264 encoded move in the movies folder.

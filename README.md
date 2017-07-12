@@ -78,6 +78,17 @@ see [ffmpeg on raspbian / Raspberry Pi](http://hannes.enjoys.it/blog/2016/03/ffm
 
 ## Running the Python Scripts
 
+Create these folders:
+
+```
+project root
+  |-timelapse
+  |  |-done
+  |-movies
+```
+
+Run the script ```python3 cam.py```
+
 The first time you run the python camera script you will get errors about missing dependencies. That's expected - you need to install the dependencies as specified in the error messages, or from this dependencies list in the camera script:
 
 ```

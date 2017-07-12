@@ -82,10 +82,14 @@ see [ffmpeg on raspbian / Raspberry Pi](http://hannes.enjoys.it/blog/2016/03/ffm
 
 ## Running the Python Scripts
 
+```git clone https://github.com/geocolumbus/pi-timelapse-camera.git```
+
+```cd pi-timelapse-camera```
+
 Create these folders:
 
 ```
-project root
+pi-timelapse-camera
   |-timelapse
   |  |-done
   |-movies

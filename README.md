@@ -4,10 +4,12 @@
 
 [![Columbus Ohio Time Lapse Video](https://img.youtube.com/vi/PmDKXX1XHno/0.jpg)](https://www.youtube.com/watch?v=PmDKXX1XHno)
 
-# pi-timelapse-camera
-Raspberry Pi timelapse camera files
+## Hardwarew
 
-TODO - detail RPi setup to create a timelapse camera
+* [Raspberry Pi 3](https://www.amazon.com/Raspberry-Model-A1-2GHz-64-bit-quad-core/dp/B01CD5VC92/ref=sr_1_3?s=pc&ie=UTF8&qid=1499880702&sr=1-3&keywords=raspberry+pi+3)
+* [Rapsberry Pi Camera V2](https://www.amazon.com/Raspberry-Pi-Camera-Module-Megapixel/dp/B01ER2SKFS/ref=sr_1_3?s=electronics&ie=UTF8&qid=1499880820&sr=1-3&keywords=raspberry+pi+3+camera)
+* [Raspberry Pi power supply](https://www.amazon.com/CanaKit-Raspberry-Supply-Adapter-Charger/dp/B00MARDJZ4/ref=sr_1_1?s=electronics&ie=UTF8&qid=1499880799&sr=1-1-spons&keywords=raspberry+pi+3+power+supply&psc=1)
+* [SD Card](https://www.amazon.com/SanDisk-microSDHC-Standard-Packaging-SDSQUNC-032G-GN6MA/dp/B010Q57T02/ref=pd_bxgy_147_img_2?_encoding=UTF8&psc=1&refRID=N2HGSMWD8V6H4245YZ9P)
 
 ## Configure the Pi
 

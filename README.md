@@ -97,7 +97,7 @@ pi-timelapse-camera
 
 Run the script ```python3 cam.py``` and images will start accumulating in the timelapse folder.
 
-The first time you run the python camera script you will get errors about missing dependencies. That's expected - you need to install the dependencies as specified in the error messages, or from this dependencies list in the camera script:
+The first time you run the python camera script you will get errors about missing dependencies. That's expected - you need to install the dependencies as specified in the error messages, or from this dependencies list in the camera script. See [INSTALLING PYTHON PACKAGES](https://www.raspberrypi.org/documentation/linux/software/python.md) for details on how to use ```apt-get``` or ```pip``` to install Python dependencies.
 
 ```
 from time import sleep
@@ -108,7 +108,3 @@ from datetime import datetime
 from dateutil import tz
 import os
 ```
-
-Note - we use Python3, so type ```python3``` and not ```python``` when running scripts from the command line.
-
-For more information, see [INSTALLING PYTHON PACKAGES](https://www.raspberrypi.org/documentation/linux/software/python.md) for details on how to use ```apt-get``` or ```pip``` to install Python dependencies.

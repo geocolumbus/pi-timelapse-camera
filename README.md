@@ -1,5 +1,9 @@
 # Raspberry Pi Time Lapse Camera
 
+This project consists of a README file that explains how to set up a Raspberry Pi 3 with a V2 Camera to take timelapse photos from 1/2 hour before sunrise to 1/2 hour after sunset, and a camera python3 script and some shell scripts.
+
+The photos are taken once every 6 seconds, and stiched together into a HD AVI movie of about 100 - 200 MB in size. It takes the Pi about 1.5 hours to compress the images into videos using ffmpeg starting about 9:40 pm at the end of the day. The next morning, you can watch the previous day's video.
+
 ## Sample Video
 
 [![Columbus Ohio Time Lapse Video](https://img.youtube.com/vi/PmDKXX1XHno/0.jpg)](https://www.youtube.com/watch?v=PmDKXX1XHno)

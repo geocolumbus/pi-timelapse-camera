@@ -89,8 +89,18 @@ see [ffmpeg on raspbian / Raspberry Pi](http://hannes.enjoys.it/blog/2016/03/ffm
 
 ## Running the Python Scripts
 
-The first time you run the python camera script you will get errors about missing dependencies. That's expected - you need to install the dependencies.
+The first time you run the python camera script you will get errors about missing dependencies. That's expected - you need to install the dependencies as specified in the error messages, or from this dependencies list in the camera script:
+
+```
+from time import sleep
+from picamera import PiCamera
+from time import localtime, strftime
+import ephem
+from datetime import datetime
+from dateutil import tz
+import os
+```
 
 Note - we use Python3, so type ```python3``` and not ```python``` when running scripts from the command line.
 
-See [INSTALLING PYTHON PACKAGES](https://www.raspberrypi.org/documentation/linux/software/python.md) for details on how to use ```apt-get``` or ```pip``` to install Python dependencies.
+For more information, see [INSTALLING PYTHON PACKAGES](https://www.raspberrypi.org/documentation/linux/software/python.md) for details on how to use ```apt-get``` or ```pip``` to install Python dependencies.

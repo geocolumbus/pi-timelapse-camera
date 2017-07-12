@@ -95,7 +95,7 @@ pi-timelapse-camera
   |-movies
 ```
 
-Run the script ```python3 cam.py```
+Run the script ```python3 cam.py``` and images will start accumulating in the timelapse folder.
 
 The first time you run the python camera script you will get errors about missing dependencies. That's expected - you need to install the dependencies as specified in the error messages, or from this dependencies list in the camera script:
 

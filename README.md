@@ -38,8 +38,9 @@ build and make ffmpeg
 git clone --depth=1 git://source.ffmpeg.org/ffmpeg.git
 cd ffmpeg
 ```
-Note - use armhf for hardware float (Pi3) vs. armel for software float
-```./configure --arch=armhf --target-os=linux --enable-gpl --enable-libx264 --enable-nonfree
+Note - set architecture to ```armhf``` for Pi3 (hardware float) vs. ```armel``` for Pi2 (software float).
+```
+./configure --arch=armhf --target-os=linux --enable-gpl --enable-libx264 --enable-nonfree
 make -j 4
 sudo make install
 ```

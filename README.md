@@ -36,17 +36,6 @@ wget https://dl.dropboxusercontent.com/u/somenumber/authorized_keys  <- stick yo
 chmod 600 ~/.ssh/authorized_keys
 sudo raspi-config   <— turn on the ssh
 ```
-#### Install fail2ban on the Pi
-
-The internet is a nasty place. If your server will be connected to it, this is helpful.
-
-```
-sudo apt-get install fail2ban
-cd /etc/fail2ban
-cp jail.conf jail.local
-nano jail.local
-service fail2ban start
-```
 
 ### Install the Camera
 

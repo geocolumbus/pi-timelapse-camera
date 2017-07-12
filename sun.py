@@ -1,3 +1,7 @@
+#
+# Test script to calculate the sunrise and sunset times, and detect if we are between
+# 1/2 hour before sunrise and 1/2 hour after sunset.
+#
 from time import sleep
 from picamera import PiCamera
 from time import localtime, strftime

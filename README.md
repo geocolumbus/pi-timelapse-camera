@@ -13,10 +13,14 @@ TODO - detail RPi setup to create a timelapse camera
 
 ### Basic Configuration Information
 
+This is hardly complete, but it is basic info to get a Raspberry Pi up and running as headless server on a home WIFI network.
+
 * [Download Raspbian](https://www.raspberrypi.org/downloads/)
 * [Use Apple Pi Baker to get Raspbian onto an SD Card](https://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/)
 * Boot up the Pi and update everything ```sudo apt-get update && sudo apt-get upgrade```
-* Configure the pi from the command line ```sudo raspi-config```
+* Set the hostname ```sudo nano /etc/hostname```
+* Configure the pi from the command line ```sudo raspi-config``` - you can set the root user, etc.
+* Install git ```sudo apt-get install git```
 * [How to Setup Wi-Fi and Bluetooth on the Raspberry Pi 3](http://www.makeuseof.com/tag/setup-wi-fi-bluetooth-raspberry-pi-3/)
 * [“Americanizing” the Raspberry Pi](http://rohankapoor.com/2012/04/americanizing-the-raspberry-pi/)
 
@@ -30,8 +34,21 @@ wget https://dl.dropboxusercontent.com/u/somenumber/authorized_keys  <- stick yo
 chmod 600 ~/.ssh/authorized_keys
 sudo raspi-config   <— turn on the ssh
 ```
+#### Install fail2ban on the Pi
+
+The internet is a nasty place. If your server will be connected to it, this is helpful.
+
+```
+sudo apt-get install fail2ban
+cd /etc/fail2ban
+cp jail.conf jail.local
+nano jail.local
+service fail2ban start
+```
 
 ### Install the Camera
+
+The camera can be controlled by running python3 scripts.
 
 ```sudo apt-get install python3-picamera```
 

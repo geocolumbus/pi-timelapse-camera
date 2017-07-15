@@ -6,7 +6,7 @@ The photos are taken once every 6 seconds, and stiched together into a H264 enco
 
 ## Sample Video
 
-[![Columbus Ohio Time Lapse Video](https://img.youtube.com/vi/PmDKXX1XHno/0.jpg)](https://www.youtube.com/watch?v=PmDKXX1XHno)
+[![Columbus Ohio Time Lapse Video](https://img.youtube.com/vi/bHydfI2YfoE/0.jpg)](https://www.youtube.com/watch?v=bHydfI2YfoE)
 
 ## Hardware
 

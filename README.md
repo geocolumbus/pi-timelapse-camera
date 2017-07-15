@@ -80,6 +80,16 @@ sudo make install
 see [ffmpeg on raspbian / Raspberry Pi](http://hannes.enjoys.it/blog/2016/03/ffmpeg-on-raspbian-raspberry-pi/
 ) for more details on ffmpeg.
 
+To execute ffmpeg, use the makemovie.sh script.
+
+```
+# Takes files from the timelapse/done folder and stiches them into a movie in the movies folder. 
+ROOT=/home/pi
+FILENAME=`date +%Y-%m-%d`
+rm "$ROOT/camera/movies/$FILENAME.mov"
+/usr/local/bin/ffmpeg -r 25 -pattern_type glob -i "$ROOT/pi-timelapse-camera/timelapse/done/*.jpg" -c:v libx264 "$ROOT/pi-timelapse-camera/movies/$FILENAME.mov"
+```
+
 ## Running the Python Scripts
 
 ```git clone https://github.com/geocolumbus/pi-timelapse-camera.git```
